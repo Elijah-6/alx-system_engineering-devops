@@ -1,1 +1,2 @@
-Starting devops ha
+Script permisions 
+ su betty --- change user to betty
