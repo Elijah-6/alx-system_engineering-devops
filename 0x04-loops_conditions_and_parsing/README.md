@@ -29,9 +29,9 @@ Requirements:
 
 SSH and RSA keys will be covered in depth in a later project.
 
-2. [1-for_best_school](1-for_best_school) :Display "Best School" 10 times using <b>for<b> loop
+2. [1-for_best_school](1-for_best_school) :Display "Best School" 10 times using <b>for</b> loop
 
-3. [2-while_best_school](2-while_best_school) :Display "Best School" 10 times using <b>while<b> loop
+3. [2-while_best_school](2-while_best_school) :Display "Best School" 10 times using <b>while</b> loop
 
 4. [3-until_best_school](3-until_best_school)
 
