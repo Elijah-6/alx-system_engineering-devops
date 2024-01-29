@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# display the content of /etc/passwd
+
+file="/etc/passwd"
