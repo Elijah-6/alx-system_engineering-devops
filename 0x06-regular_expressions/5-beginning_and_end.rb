@@ -1,3 +1,3 @@
 #!/usr/bin/env ruby
-# Match hb*tn
+# Match any charater between h and n
 puts ARGV[0].scan(/h.*n/).join
