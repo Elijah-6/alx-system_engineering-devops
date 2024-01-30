@@ -12,5 +12,5 @@ puts ARGV[0].scan(/127.0.0.[0-9]/).join
 
 1. [simply match "school"](0-simply_match_school.rb)
 
-2. [match one or more t](1-repetition_token_0.rb)
+2. [Regexp contains 2-5 "t" between hn](1-repetition_token_0.rb)
 <img src="./assets/Screenshot from 2024-01-30 13-10-05.png">
