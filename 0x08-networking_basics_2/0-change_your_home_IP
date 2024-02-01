@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# update host file to change localhost to 127.0.0.2 and 8.8.8.8 to facebook.com
+
+cp /etc/hosts /etc/hosts_tmp
+sed -i s/127.*$/127.0.0.2\\tlocalhost\\n8.8.8.8\\tfacebook.com/g hosts_tmp
+cp -f hosts_tmp /etc/hosts
