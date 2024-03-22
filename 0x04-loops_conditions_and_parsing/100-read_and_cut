@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# display the content of /etc/passwd
+
+FILE_PATH="/etc/passwd"
+while read -r LINE
+do
+    echo "$LINE" | cut -d: -f1,3,6
+done < $FILE_PATH
