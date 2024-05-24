@@ -1,20 +1,5 @@
-#!/bin/bash
-
-# Key name
-KEY_NAME="school"
-
-# Key type (RSA)
-KEY_TYPE="rsa"
-
-# Number of bits (4096)
-KEY_BITS=4096
-
-# Passphrase
-PASSPHRASE="betty"
+#!/usr/bin/env bash
 
 # Generate the key pair with options
-ssh-keygen -t "$KEY_TYPE" -b "$KEY_BITS" -f "$KEY_NAME" -C "" -N "$PASSPHRASE"
-
-# Exit script on any error
-	exit $?
+ssh-keygen -t rsa -b 4095 -f "school" -C "" -N "betty"
 
