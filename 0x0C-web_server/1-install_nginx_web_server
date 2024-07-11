@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# a script to install and configure nginx on a web server
+
 
 # Update package list
 apt update
