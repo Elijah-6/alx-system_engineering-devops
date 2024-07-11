@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+
+# Update package list
+apt update
+
+# Install nginx
+apt install -y nginx
+
+# Create file containing "Hello World!"
+echo "Hello World!" > /var/www/html/index.html
+
+# Configure nginx to serve the custom HTML file
+cat > /etc/nginx/sites-available/web-01 <<EOF
+server {
+    listen 80;
+    server_name _;
+
+    location / {
+        root /var/www/html;
+        index index.html;
+    }
+}
+EOF
+
+# Create a symbolic link to enable the site configuration
+ln -s /etc/nginx/sites-available/web-01 /etc/nginx/sites-enabled/
+
+# Remove the default nginx welcome page
+rm -f /etc/nginx/sites-enabled/default
+
+# Test nginx configuration for syntax errors
+nginx -t
+
+# Restart nginx (without systemctl)
+kill -s HUP $(pgrep -f "nginx: master process")
+
+# Ensure nginx service is running (if not using systemctl)
+ps aux | grep nginx
+
