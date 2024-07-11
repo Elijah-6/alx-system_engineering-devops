@@ -3,16 +3,18 @@
 
 
 # Update package list
-apt update
+sudo apt update
 
 # Install nginx
-apt install -y nginx
+sudo apt install -y nginx
+
+sudo ufw allow 'Nginx HTTP'
 
 # Create file containing "Hello World!"
-echo "Hello World!" > /var/www/html/index.html
+sudo bash -c echo "Hello World!" > /var/www/html/index.html
 
 # Configure nginx to serve the custom HTML file
-cat > /etc/nginx/sites-available/web-01 <<EOF
+sudo cat > /etc/nginx/sites-available/web-01 <<EOF
 server {
     listen 80;
     server_name _;
