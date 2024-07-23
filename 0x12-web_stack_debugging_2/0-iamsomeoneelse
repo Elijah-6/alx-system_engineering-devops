@@ -1,11 +1,3 @@
 #!/usr/bin/env bash
-# Check if exactly one argument is passed
-if [ "$#" -ne 1 ]; then
-    echo "Usage: $0 username"
-    exit 1
-fi
-
-USERNAME=$1
-
-# Attempt to run whoami as the specified user
-sudo su - $USERNAME -c "whoami"
+# Runs the whoami command under the user passed as argument.
+sudo -u "$1" whoami
