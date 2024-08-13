@@ -6,7 +6,6 @@ the number of subscribers for a given subreddit.
 import requests
 
 
-
 def number_of_subscribers(subreddit):
     """ Queries to Reddit API """
     u_agent = 'Mozilla/5.0'

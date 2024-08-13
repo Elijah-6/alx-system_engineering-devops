@@ -6,7 +6,6 @@ the top ten hot posts of a subreddit
 import requests
 
 
-
 def add_title(hot_list, hot_posts):
     """ Adds item into a list """
     if len(hot_posts) == 0:
