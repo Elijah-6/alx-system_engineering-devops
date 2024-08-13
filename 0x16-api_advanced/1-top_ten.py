@@ -31,5 +31,6 @@ def top_ten(subreddit):
     if len(hot_posts) == 0:
         print(None)
     else:
+        hot_posts.pop(0)
         for post in hot_posts:
             print(post['data']['title'])
