@@ -5,7 +5,6 @@ the top ten hot posts of a subreddit
 """
 import re
 import requests
-import sys
 
 
 def add_title(dictionary, hot_posts):
@@ -66,7 +65,7 @@ def count_words(subreddit, word_list):
 
     if len(l) != 0:
         for item in l:
-            if item[1] is not 0:
+            if item[1] != 0:
                 print("{}: {}".format(item[0], item[1]))
     else:
         print("")
