@@ -4,7 +4,6 @@ Function that queries the Reddit API and prints
 the top ten hot posts of a subreddit
 """
 import requests
-import sys
 
 
 def top_ten(subreddit):
@@ -27,9 +26,9 @@ def top_ten(subreddit):
     if res.status_code != 200:
         print(None)
         return
-    dic = res.json()
-    hot_posts = dic['data']['children']
-    if len(hot_posts) is 0:
+    sub = res.json()
+    hot_posts = sub['data']['children']
+    if len(hot_posts) == 0:
         print(None)
     else:
         for post in hot_posts:
