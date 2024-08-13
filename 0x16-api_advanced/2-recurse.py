@@ -4,7 +4,7 @@ Function that queries the Reddit API and prints
 the top ten hot posts of a subreddit
 """
 import requests
-import sys
+
 
 
 def add_title(hot_list, hot_posts):
@@ -36,10 +36,10 @@ def recurse(subreddit, hot_list=[], after=None):
     if res.status_code != 200:
         return None
 
-    dic = res.json()
-    hot_posts = dic['data']['children']
+    sub = res.json()
+    hot_posts = sub['data']['children']
     add_title(hot_list, hot_posts)
-    after = dic['data']['after']
+    after = sub['data']['after']
     if not after:
         return hot_list
     return recurse(subreddit, hot_list=hot_list, after=after)
